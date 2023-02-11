@@ -1,3 +1,6 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
 /* You can add global styles to this file, and also import other style files */
 a { cursor: pointer; }
 
@@ -10,4 +13,70 @@ a { cursor: pointer; }
     width: 40px;
     text-align: center;
     box-sizing: content-box;
+}
+
+.lbl{
+    color: #b9d3bf;
+    margin-bottom: 0px;
+  }
+
+  .report-lbl{
+    color: #435d7d;
+      margin-bottom: 0px;
+  }
+
+// html, body, app-root {
+//     height: 100%;
+//     margin: 0;
+//     }
+
+
+.search-btn{
+  background: #053570;
+          color: #fff;
+          width: 42px;
+          border-radius: 0px 6px 5px 0px;
+          border: none;
+}
+
+
+
+//Side menu CSS
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 1px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

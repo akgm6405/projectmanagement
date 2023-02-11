@@ -1,0 +1,24 @@
+<!-- <app-sidebar (collapsedEvent)="receiveCollapsed($event)" class="sidebar" style="background: #d8f1ea;"></app-sidebar> -->
+
+<!-- wrapper starts -->
+<!-- <div class="wrapper py-0 pr-0" (click)="toggleSidebar()" style="background-color:#d8f1ea;"> -->
+    <!-- <div class="content shadow-sm "> -->
+        <!-- <div class="container-fluid header-container" > -->
+            <!-- <div class="row header"> -->
+                <app-header class="container-fluid " id="header-container"></app-header>
+            <!-- </div> -->
+            <!-- <div class="row submenu">
+                <app-subheader class="container-fluid" id="submenu-container"></app-subheader>
+            </div>  -->
+        <!-- </div> -->
+
+        <!-- Main container starts -->
+         <!-- <div class="container-fluid main-container" id="main-container" style="background-color: #2c278e; padding-bottom: 15px;">  -->
+            <router-outlet></router-outlet>
+         <!-- </div>  -->
+        <!-- Main container ends -->
+    <!-- </div> -->
+
+    <app-footer class="footer p-0 position-relative d-block"></app-footer> 
+<!-- </div> -->
+<!-- wrapper ends -->

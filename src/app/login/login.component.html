@@ -1,0 +1,213 @@
+<div style="position: fixed; top: 0;width: 100%; z-index: 1;">
+    <!-- <nav class="navbar navbar-inverse" style="   
+   width: 100%;
+   background: rgb(29, 74, 114);">
+    </nav> -->
+
+    <div class="header">
+
+        <a href="#default" class="logo" style="    background: -webkit-linear-gradient(#53148d, #333);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-transform: uppercase;margin-left: 5px;">Team Management</a>
+        <div class="header-right">
+
+            <!-- <a class="active" href="/dashboard">Dashboard</a>
+     <a class="active" href="/device"><span>|</span> Device  </a>
+     <a class="active" href="/rawData"><span>|</span> Raw Data  </a>
+      <a class="active" href="/sendCommand"><span>|</span> Send Command </a> -->
+        </div>
+
+    </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<div class="container-fluid">
+
+    <form novalidate #LoginForm=ngForm  style="border-style: double; border-color: black; " >
+        <div>
+            <h3>Login</h3>
+        </div>
+        <hr style="border: 2px solid green; border-radius: 5px;">
+        <div class="row" *ngIf="pass3" >
+            <div class="col-md-12">
+                <div style="text-align:center">
+                    <label class=""><strong>Mobile Number</strong><span class="mendatory">*</span></label>
+                </div>
+                <div class="input-group mb-3" >
+                    <input class="form-control" type="text" id="mobilenumber" name="mobilenumber" required
+                        onkeypress="alphaSpaceOnly(event)" [(ngModel)]="mobileNo" placeholder="Mobile Number"
+                        #mobileCtrl="ngModel" style="height: 37px;font-size: 13px;text-transform: none;" [ngClass]="{
+                            'is-invalid': mobileCtrl.invalid && mobileCtrl.touched,
+                            'is-valid': mobileCtrl.valid &&  mobileCtrl.touched }">
+                    <div class="input-group-append" style="margin-top: 7px;">
+                        <i class="fa fa-user" style="font-size: 24px;
+                            height: 39px; padding: 5px; border-radius: 2px;"></i>
+                    </div>
+                </div>
+                <span *ngIf="mobileCtrl.invalid &&  mobileCtrl.touched">
+                    <small style="color: red;">Mobile No. is required</small>
+                </span>
+            </div>
+        </div>
+
+            <div class="row" *ngIf="pass4" >
+            <div class="col-md-12">
+                <div style="text-align:center">
+                    <label class=""><strong>Mobile Number</strong><span class="mendatory">*</span></label>
+                </div>
+                <div class="row">
+                <div class="col-md-9">
+                <div class="input-group mb-1" >
+                    <input class="form-control" type="text" id="mobilenumber" name="mobilenumber" required
+                        onkeypress="alphaSpaceOnly(event)" [(ngModel)]="mobileNo" placeholder="Mobile Number"
+                        #mobileCtrl="ngModel" style="height: 37px;font-size: 13px;text-transform: none;" [ngClass]="{
+                            'is-invalid': mobileCtrl.invalid && mobileCtrl.touched,
+                            'is-valid': mobileCtrl.valid &&  mobileCtrl.touched }">
+                    <div class="input-group-append" style="margin-top: 7px;">
+                        <i class="fa fa-user" style="font-size: 24px;
+                            height: 39px; padding: 5px; border-radius: 2px;"></i>
+                    </div>
+                </div>
+
+                <span *ngIf="mobileCtrl.invalid &&  mobileCtrl.touched">
+                    <small style="color: red;">Mobile No. is required</small>
+                </span>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-sm">Send OTP</button>
+            </div>
+        </div>
+            </div>
+        </div><br>
+
+
+
+
+        
+            <div class="row"  >
+                <div class="col-md-6"  >
+                <div  style="text-align:center" >
+                    <input class="form-check-input" type="radio" name="exampleRadios" (change)="handleChange1($event)"
+                    id="exampleRadios1" value="option1" style="width: 1em;height: 1rem; accent-color: green;" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Password
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-6" >
+                <div style="text-align:center"  >
+                        <input class="form-check-input" type="radio" name="exampleRadios"
+                            (change)="handleChange2($event)" id="exampleRadios2"
+                            style="width: 1em; height: 1rem; accent-color: green;" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            OTP
+                        </label>
+                </div>
+            </div>
+            </div><br>
+        
+
+
+
+        <div class="row" *ngIf="pass1">
+            <div class="col-md-12">
+                <div style="text-align:center">
+                    <label class=""><strong>Password</strong><span class="mendatory">*</span></label>
+                </div>
+                <div class="input-group mb-3">
+                    <input class="form-control" type="password" id="pass" name="pass" required [(ngModel)]="password"
+                        placeholder="Password" #passwordCtrl="ngModel"
+                        style="height: 37px;font-size: 13px;text-transform: none;" [ngClass]="{
+                                'is-invalid': passwordCtrl.invalid && passwordCtrl.touched,
+                                'is-valid': passwordCtrl.valid &&  passwordCtrl.touched }">
+                    <div class="input-group-append" style=" ">
+                        <i class="fa fa-eye" style=" cursor: pointer;
+                        font-size: 20px;
+                        padding: 4px;
+                        border-radius: 2px; margin-top: 2px; " (click)='ShowPassword();'></i>
+                    </div>
+                </div>
+                <span *ngIf="passwordCtrl.invalid &&  passwordCtrl.touched">
+                    <small style="color: red;">Password is required</small>
+                </span>
+            </div>
+        </div>
+
+
+        <div class="row" *ngIf="pass2" >
+            <div class="col-md-12">
+                <div style="text-align:center">
+                    <label class="">OTP<span class="mendatory">*</span></label>
+                </div>
+                <div class="input-group mb-3">
+                    <input class="form-control" type="text" id="otp" name="otp" required [(ngModel)]="otp"
+                        placeholder="OTP" #otpCtrl="ngModel"
+                        style="height: 37px;font-size: 13px;text-transform: none;" [ngClass]="{
+                                'is-invalid': otpCtrl.invalid && otpCtrl.touched,
+                                'is-valid': otpCtrl.valid &&  otpCtrl.touched }">
+                    <div class="input-group-append" style=" ">
+                        <i class="fa fa-eye" style=" cursor: pointer;
+                        font-size: 20px;
+                        padding: 4px;
+                        border-radius: 2px; margin-top: 2px; " (click)='ShowPassword();'></i>
+                    </div>
+                </div>
+                <span *ngIf="otpCtrl.invalid &&  otpCtrl.touched">
+                    <small style="color: red;">Otp is required</small>
+                </span>
+            </div>
+        </div>
+
+
+
+        <!-- <div class="row">
+                <div class="col-md-5">
+                    <input class="form-control" type="text" id="ud" name="captchaname" required
+                        [(ngModel)]="captchaInput" placeholder="Enter Captcha" maxlength="4" minlength="4"
+                        #captchaCtrl="ngModel" style="height: 37px;width: 125px;font-size: 13px; text-transform: none;" 
+                        (keydown.enter)="loginbutton.click();">
+                    <span *ngIf="captchaCtrl.invalid &&  captchaCtrl.touched">
+                        <small style="color: red;">Captcha is required</small>
+                    </span>
+                </div>
+                <div class="col-md-6" style="display: flex;">
+                    <label class="captcha-text">{{generatedcaptcha}}</label> <i class="fa fa-refresh" aria-hidden="true"
+                        (click)="createCaptcha()" style="    margin: 15px 17px;
+                        font-size: 23px;
+                        color: #19019f;
+                        cursor: pointer;"></i>
+                </div>
+
+            </div> -->
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" #loginbutton class="login-btn" (click)="onSubmit()"
+                    [disabled]="LoginForm.invalid">Login</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+<!-- login confirmation popup modal -->
+
+<!-- popup modal alert message -->
+<!-- <div class="w3-container">
+    <div id="loginconfirmation" class="w3-modal">
+        <div class="w3-modal-content"
+            style="width: 356px;border: 2px solid #f3f3f9;border-radius: 5px;text-align: center;padding: 10px;top: 3%;">
+            <div class="w3-container" style="margin-top: 11px;">
+                <p style="font-weight: bold;">{{confirmMessage1}}</p>
+                <p style="font-weight: bold;">{{confirmMessage2}}</p>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <button type="button" class="confirm-no-btn" (click)="NoResponse()">NO</button>
+                <button type="button" class="confirm-yes-btn" (click)="YesResponse()">YES</button><br>
+            </div>
+        </div>
+    </div>
+</div> -->

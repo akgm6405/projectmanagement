@@ -1,0 +1,58 @@
+<a class="logo">
+    <img src="" alt="" class="logo-icon mt-1" id="minilogo"
+        style="background: #0f6eb3;width: 60px;height: 60px;padding: 5px;border-radius: 30px;margin-left: -20px;">
+    <img src="" style="width: 100px; margin-left: 50px; display: none;" alt="" class="logo-icon mt-1" id="mainlogo"
+        style="display: none;width:100px">
+    <div id="mainlogoname" style="display: none;"><span
+            style="margin-left:-20px;color: #034e9e;text-shadow: 1px 1px #77c1e4;">Sikkim Team Management</span></div>
+</a>
+
+
+
+<ul class="nav flex-column">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="javascript:void(0)" (click)="addExpandClass('dashboard')"><i
+                class="material-icons icon navodd">dashboard</i><span>Masters</span> <i
+                class="material-icons arrow">expand_more</i></a>
+        <div class="nav flex-column" [class.d-block]="showMenu === 'dashboard'">
+            <div class="nav-item" routerLink="/mapping" [routerLinkActive]="['active']"><a
+                    class="nav-link"><span>ApiMapping</span></a></div>
+            <div class="nav-item" [routerLink]="['/dashboard/logindash']" [routerLinkActive]="['active']"><a
+                    class="nav-link"><span>Developer</span></a></div>
+            <div class="nav-item" [routerLink]="['/dashboard/admindashboard']" [routerLinkActive]="['active']"><a
+                    class="nav-link"><span>Page</span></a>
+            </div>
+            <div class="nav-item" [routerLink]="['/dashboard/vendordashboard']" [routerLinkActive]="['active']"><a
+                    class="nav-link"><span>Project</span></a>
+            </div>
+
+        </div>
+    </li>
+
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="javascript:void(0)" (click)="addExpandClass('pages')"><i
+                class="material-icons icon naveven">turned_in_not</i><span>Transactions</span> <i
+                class="material-icons arrow">expand_more</i></a>
+
+        <div class="nav flex-column" [class.d-block]="showMenu === 'pages'">
+
+            <div class="nav-item" [routerLink]="['/commonmasters/device_maker']" [routerLinkActive]="['active']"><a
+                    class="nav-link"><span>Device Manufacturer</span></a>
+            </div>
+
+            <div class="nav-item" [routerLink]="['/commonmasters/device_model']" [routerLinkActive]="['active']"><a
+                    class="nav-link"><span>Device Model</span></a></div>
+
+            <div class="nav-item" [routerLink]="['/commonmasters/dealermaster']" [routerLinkActive]="['active']"><a
+                    class="nav-link"><span>Dealer</span></a></div>
+
+            <div class="nav-item" [routerLink]="['/commonmasters/distributor']" [routerLinkActive]="['active']"><a
+                    class="nav-link"><span>Distributor</span></a></div>
+
+
+        </div>
+    </li>
+
+
+</ul>

@@ -7,8 +7,73 @@
 
     <!-- bootstrap css -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <link href="assets/ol.css" rel="stylesheet">
+  <link href="assets/mapcustomcss.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link  href="/src/font-awsome.min.css">
+  <script src="/src/boostrap.bundle.js"></script>
+  <script src="/src/jquery.min.js"></script>
+
+
+
+
+
+
+
+
 </head>
 <body>
     <app>Loading...</app>
+
+    <script>
+
+
+      function alphaSpaceOnly(event) {
+        var key = event.keyCode;
+        return ((key >= 65 && key <= 90) || (key >= 97 && key <= 122) || key == 32);
+      };
+      
+      </script>
+
+
+<!-- side menu code -->
+<div id="mySidenav" class="sidenav" onmouseup="normalImg(this)">
+  <a href="javascript:void(0)" class="closebtn" id="closeButton" onclick="closeNav()">&times;</a>
+  <a href="layout/masters/home">&#9776; HOME</a>
+  <a href="layout/masters/developer">&#9776; DEVELOPER</a>
+  <a href="layout/masters/project">&#9776; PROJECT</a>
+  <a href="layout/masters/page">&#9776; PAGE</a>
+  <a href="layout/masters/mapping">&#9776; MAPPING</a>
+  <a href="layout/transactions/api">&#9776; API LOGS</a>
+</div>
+
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  function normalImg(x) {
+    document.getElementById('closeButton').click();
+  }
+  $("#mySidenav").hover(function(){
+    document.getElementById("mySidenav").style.width = "250px";
+    }, function(){
+      document.getElementById("mySidenav").style.width = "0";
+  });
+  </script>
+
 </body>
 </html>
+

@@ -1,3 +1,6 @@
+
+
+
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
@@ -123,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-9-registration-login-example"
+    }
+  },
+  "defaultProject": "angular-9-registration-login-example",
+  "cli": {
+    "analytics": "22d72233-3f12-4f0d-8453-07dcb1f978ce"
+  }
 }
